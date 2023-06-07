@@ -3,25 +3,25 @@
     "icon": "images/icon.jpeg",
     "displayName": "懒人代码生成器",
     "description": "表单代码生成器，解放双手，提升生产力",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "license": "MIT",
     "engines": {
         "vscode": "^1.63.0"
     },
     "author": {
-        "name": "徐崇玉",
+        "name": "xcy960815",
         "email": "18763006837@163.com"
     },
-    "publisher": "xuchongyu",
+    "publisher": "xcy960815",
     "categories": [
         "Other"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/ChongYu-Yease/code-builder-vscode-plugin.git"
+        "url": "https://github.com/xcy960815/lazy-code-builder.git"
     },
     "activationEvents": [
-        "onCommand:extension.openFormMaker"
+        "onCommand:lazy-code-builder.openFormMaker"
     ],
     "main": "./extension.js",
     "contributes": {
@@ -38,14 +38,14 @@
         },
         "commands": [
             {
-                "command": "extension.openFormMaker",
+                "command": "lazy-code-builder.openFormMaker",
                 "title": "打开表单设计器"
             }
         ],
         "menus": {
             "explorer/context": [
                 {
-                    "command": "extension.openFormMaker",
+                    "command": "lazy-code-builder.openFormMaker",
                     "group": "navigation"
                 }
             ]

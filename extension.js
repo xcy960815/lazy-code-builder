@@ -1,15 +1,17 @@
-const vscode = require('vscode')
-const formLoader = require('./src/form-loader')
+const vscode = require("vscode");
+const FormViewProvider = require("./src/form-view-provider");
 function activate(context) {
-    const disposable = vscode.commands.registerCommand(
-        'extension.openFormMaker',
-        (uri) => formLoader(context, uri)
-    )
-    context.subscriptions.push(disposable)
+  const openFormMakerCommand = vscode.commands.registerCommand(
+    "lazy-code-builder.openFormMaker",
+    (uri) => {
+      return new FormViewProvider(context, uri);
+    }
+  );
+  context.subscriptions.push(openFormMakerCommand);
 }
 function deactivate() {}
 
 module.exports = {
-    activate,
-    deactivate,
-}
+  activate,
+  deactivate,
+};
