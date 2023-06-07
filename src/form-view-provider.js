@@ -35,7 +35,7 @@ class FormViewProvider {
   createWebviewPanel() {
     this.webviewPanel = vscode.window.createWebviewPanel(
       "formMaker",
-      "表单设计器",
+      "表单生成器",
       vscode.ViewColumn.One,
       {
         enableScripts: true, // 启用JS，默认禁用
