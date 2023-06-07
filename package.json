@@ -1,5 +1,5 @@
 {
-    "name": "v-from-builder",
+    "name": "v-form-builder",
     "icon": "images/icon.png",
     "displayName": "表单生成器",
     "description": "表单代码生成器，解放双手，提升生产力",
@@ -21,7 +21,7 @@
         "url": "https://github.com/xcy960815/lazy-code-builder.git"
     },
     "activationEvents": [
-        "onCommand:lazy-code-builder.openFormMaker"
+        "onCommand:v-form.openFormMaker"
     ],
     "main": "./extension.js",
     "contributes": {
@@ -38,14 +38,14 @@
         },
         "commands": [
             {
-                "command": "lazy-code-builder.openFormMaker",
+                "command": "v-form.openFormMaker",
                 "title": "打开表单生成器"
             }
         ],
         "menus": {
             "explorer/context": [
                 {
-                    "command": "lazy-code-builder.openFormMaker",
+                    "command": "v-form.openFormMaker",
                     "group": "navigation"
                 }
             ]

@@ -2,7 +2,7 @@ const vscode = require("vscode");
 const FormViewProvider = require("./src/form-view-provider");
 function activate(context) {
   const openFormMakerCommand = vscode.commands.registerCommand(
-    "lazy-code-builder.openFormMaker",
+    "v-form.openFormMaker",
     (uri) => {
       return new FormViewProvider(context, uri);
     }
