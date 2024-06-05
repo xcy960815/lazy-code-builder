@@ -1,0 +1,73 @@
+{
+    "name": "v-form-builder",
+    "icon": "images/icon.png",
+    "displayName": "表单生成器",
+    "description": "表单代码生成器，解放双手，提升生产力",
+    "version": "0.0.2",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "author": {
+        "name": "xcy960815",
+        "email": "18763006837@163.com"
+    },
+    "publisher": "xcy960815",
+    "categories": [
+        "Other"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xcy960815/lazy-code-builder.git"
+    },
+    "activationEvents": [
+        "onCommand:v-form.openFormMaker"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Form设计器配置",
+            "properties": {
+                "FormMaker.url": {
+                    "type": "string",
+                    "default": "http://120.92.142.115/?vscode=1",
+                    "description": "表单设计器远程URL"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "v-form.openFormMaker",
+                "title": "打开表单生成器"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "v-form.openFormMaker",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.63.0",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.4",
+        "@types/node": "^12.11.7",
+        "eslint": "^7.19.0",
+        "glob": "^7.1.6",
+        "mocha": "^8.2.1",
+        "typescript": "^4.1.3",
+        "vscode-test": "^1.5.0"
+    },
+    "dependencies": {
+        "open": "^8.4.0"
+    }
+}
