@@ -3,6 +3,7 @@
 		"module": "commonjs",
 		"target": "es6",
 		"checkJs": false, /* Typecheck .js files. */
+		"skipLibCheck": true,
 		"lib": [
 			"es6"
 		]
